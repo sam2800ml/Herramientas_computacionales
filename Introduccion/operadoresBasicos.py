@@ -1,3 +1,5 @@
+import math
+
 if __name__ == "__main__":
     def sayhi():
         name = str(input("Introduce tu nombre por favor: "))
@@ -25,5 +27,23 @@ if __name__ == "__main__":
                 print("suma",sum,i)
 
     #enteros()
+                
+    def pitagoras():
+        a = int(input("Introduce la longitud del primer cateto: "))
+        b = int(input("Introduce la longitud del segundo cateto: "))
+        c = math.sqrt((a**2 + b**2))
+
+        print(f"El valor de la hipotenusa es de {c}")
+
+    #pitagoras()
+
+    def rapidez():
+        altura = float(input("Introduce la altura la cual vas a tirar el objeto en metros: "))
+
+        Vf = math.sqrt(0**2 + (2*9.8 * altura))
+
+        print(f"la velocidad final es de {Vf} m/s")
+
+    rapidez()
                 
     
