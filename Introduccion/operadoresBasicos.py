@@ -7,16 +7,26 @@ if __name__ == "__main__":
 
 
     def horas():
-        segundos = float(input("Introduce los segundos, y te los convertire: "))
+        segundos = int(input("Introduce los segundos, y te los convertire: "))
 
-        minutos = segundos / 60.0
-        horas = segundos / 3600
-        dias = segundos / 86400
+        dias = segundos // (24*3600)
+        segundos %= (24*3600)
+        horas = segundos // 3600
+        segundos %= (24*3600)
+        minutos = segundos // 60
+        segundos %= 60
+        
 
+        dias_ = str(dias).zfill(2)
+        horas_ = str(horas).zfill(2)
+        minutos_ = str(minutos).zfill(2)
+        segundos_ = str(segundos).zfill(2)
 
-        print(str(minutos).zfill(2))
+        print(f" dias: {dias_} horas: {horas_} minutos: {minutos_} segundos: {segundos_}")
 
-    #horas()
+        
+
+    horas()
 
     def enteros():
         numero = int(input("Introduce un numero: "))
@@ -44,6 +54,6 @@ if __name__ == "__main__":
 
         print(f"la velocidad final es de {Vf} m/s")
 
-    rapidez()
+    #rapidez()
                 
     
